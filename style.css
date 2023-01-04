@@ -1,0 +1,99 @@
+
+body {
+    background-color: #0c0c0d;
+}
+
+body::after{
+    animation:noiseAnimationFX 6s steps(10) infinite;
+    background-image:url(caroselling-noise-fx.png);
+    background-repeat:repeat;
+    content:"";
+    height:300%;
+    left:-100%;
+    opacity:.05;
+    pointer-events:none;
+    position:fixed;
+    top:-100%;
+    transition:opacity .4s ease;
+    width:300%;
+    will-change:transform
+}
+@keyframes noiseAnimationFX{
+    0%{
+        transform:translate(20%, -15%)
+    }
+    10%{
+        transform:translate(-20%, -15%)
+    }
+    20%{
+        transform:translate(20%, -5%)
+    }
+    30%{
+        transform:translate(-20%, -5%)
+    }
+    40%{
+        transform:translate(20%, 5%)
+    }
+    50%{
+        transform:translate(-20%, 5%)
+    }
+    60%{
+        transform:translate(20%, 15%)
+    }
+    70%{
+        transform:translate(-20%, 15%)
+    }
+    80%{
+        transform:translate(20%, 5%)
+    }
+    90%{
+        transform:translate(-20%, 5%)
+    }
+    100%{
+        transform:translate(20%, -5%)
+    }
+}
+@keyframes noiseAnimation{
+    0%{
+        transform:translate(0)
+    }
+    10%{
+        transform:translate(-5%, -5%)
+    }
+    20%{
+        transform:translate(-10%, 5%)
+    }
+    30%{
+        transform:translate(5%, -10%)
+    }
+    40%{
+        transform:translate(-5%, 15%)
+    }
+    50%{
+        transform:translate(-10%, 5%)
+    }
+    60%{
+        transform:translate(15%)
+    }
+    70%{
+        transform:translateY(10%)
+    }
+    80%{
+        transform:translate(-15%)
+    }
+    90%{
+        transform:translate(10%, 5%)
+    }
+    to{
+        transform:translate(5%)
+    }
+}
+
+h1 {
+    font-size: 100px;
+    margin-top: 20%;
+    color: #fff;
+    font-family: sans-serif;
+    max-width: 750px;
+    margin-left: 60px;
+}
